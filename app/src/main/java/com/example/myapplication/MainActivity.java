@@ -124,11 +124,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void equalsBTN(View view){
-        String userExp = display.getText().toString();
 
-        Expression exp = new Expression(userExp);
-
-        String result = String.valueOf(exp.calculate());
+        String result = equalsLogic.calculate(display.getText().toString());
 
         display.setText(result);
         display.setSelection(result.length());

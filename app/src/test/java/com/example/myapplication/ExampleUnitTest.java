@@ -11,7 +11,43 @@ import static org.junit.Assert.*;
  */
 public class ExampleUnitTest {
     @Test
-    public void addition_isCorrect() {
-        assertEquals(4, 2 + 2);
+    public void additionCount() {
+        final String inputString = "9+60";
+        final String expectedOutcome = "69.0";
+
+        assertEquals(expectedOutcome, equalsLogic.calculate(inputString));
     }
+
+    @Test
+    public void divideCount() {
+        final String inputString = "63/9";
+        final String expectedOutcome = "7.0";
+
+        assertEquals(expectedOutcome, equalsLogic.calculate(inputString));
+    }
+
+    @Test
+    public void subtractionCount() {
+        final String inputString = "500-80";
+        final String expectedOutcome = "420.0";
+
+        assertEquals(expectedOutcome, equalsLogic.calculate(inputString));
+    }
+
+    @Test
+    public void multiplyCount() {
+        final String inputString = "1000*24";
+        final String expectedOutcome = "24000.0";
+
+        assertEquals(expectedOutcome, equalsLogic.calculate(inputString));
+    }
+
+    @Test
+    public void multipleexpressionsCount() {
+        final String inputString = "8*2-10/2";
+        final String expectedOutcome = "11.0";
+
+        assertEquals(expectedOutcome, equalsLogic.calculate(inputString));
+    }
+
 }
